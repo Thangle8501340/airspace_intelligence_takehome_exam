@@ -7,6 +7,12 @@ In case you’re interested in taking a shortcut through our application process
 Each character in the hiring manager’s email was translated into the byte array above by first converting each character into its Unicode integer representation, and then XOR’ing each integer with a secret key.
 In order to find the key - you’ll have to do some aviation research into squawk codes. Specifically - the key will be the squawk code used to signal a generic emergency, with any leading or trailing 0’s trimmed out. Happy decoding!
 
+# HOW TO RUN---
+
+
+```
+python decoder.py
+```
 
 # Research
 SQUAWK CODE - aircraft codes
@@ -131,3 +137,4 @@ Damon -- Decoder/Cryptographer Guy/ Consulting
 Tems (MY FRIEND IN NORTHEASTER SENIOR YEAR - MAJOR - BIOINFORMATICS - BIOTECH --- email -- t.miyatov@gmail.com) --- with the help of my DECODER FRIEND (DAMON - EMAIL --- jelliot1231@gmail.com) --- THANG (CODER: thangle246@gmail.com) 
 
 yayyyyyyy -- sending email at 8:22 pm but it was finished at 7:30pm and i was re-reading my email for an hour 
+
