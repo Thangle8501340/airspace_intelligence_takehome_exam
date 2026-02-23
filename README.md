@@ -1,3 +1,4 @@
+# Problem
 How do we hire:
 We look at the interview process not as a screening or test, but rather as an opportunity to simulate what it would look like working together. We build the interview process around you.
 In case you’re interested in taking a shortcut through our application process - try a little puzzle on for size. Below you’ll find an array of bytes. Once decoded, it will reveal the hiring manager’s e-mail. Send an e-mail with the subject “Squawk!” and we’ll get in touch right away! Send in your code as well!
@@ -7,7 +8,7 @@ Each character in the hiring manager’s email was translated into the byte arra
 In order to find the key - you’ll have to do some aviation research into squawk codes. Specifically - the key will be the squawk code used to signal a generic emergency, with any leading or trailing 0’s trimmed out. Happy decoding!
 
 
-
+# Research
 SQUAWK CODE - aircraft codes
 
 77-> key
@@ -51,8 +52,9 @@ a	U+0061	97
 1	U+0031	49
 !	U+0021	33
 
+# Coding
 EXAMPLES:
-USING AI TO GET EXCAMPLES
+USING AI TO GET EXAMPLES
 iwillstealthemoon@gmail.com
 [36, 58, 36, 33, 33, 62, 57, 40, 44, 33, 57, 37, 40, 32, 34, 34, 35, 13, 42, 32, 44, 36, 33, 99, 46, 34, 32]
 spaceiscool@gmail.com
@@ -68,7 +70,7 @@ iwillstealthemoon@gmail.com
 --- How that byte array is built (secret key = 77) ---
 
 For each character you do:  (1) get Unicode number  (2) XOR with 77  →  that’s one byte.
-
+```
   #   char   Step 1: ord(char)   Step 2: ord XOR 77   →  byte in array
  ---  -----  -----------------  ------------------   -----------------
   0   'i'    ord('i') = 105      105 XOR 77 = 36     →  byte[0]  = 36
@@ -101,7 +103,7 @@ For each character you do:  (1) get Unicode number  (2) XOR with 77  →  that�
 
 So:  character → Unicode number → XOR 77  gives the byte at that position.
 Put all bytes in order: [36, 58, 36, 33, 33, 62, 57, 40, 44, 33, 57, 37, 40, 32, 34, 34, 35, 13, 42, 32, 44, 36, 33, 99, 46, 34, 32].
-
+```
 GOAL -> the characters
 
 
@@ -123,31 +125,9 @@ XOR
 
 
 
-numbers = [35,44,47,36,33,13,44,36,63,62,61,44,46,40,96,36,35,57,40,33,33,36,42,40,35,46,40,99,46,34,32]
-key = 77
-
-decoded_chars = []
-
-print("Num | Num (bin) | XOR Result | XOR (bin) | ASCII")
-print("-" * 60)
-
-for n in numbers:
-xor_value = n ^ key
-decoded_chars.append(chr(xor_value))
-
-print(f"{n:<4} | {format(n, '08b')} | "
-f"{xor_value:<10} | {format(xor_value, '08b')} | "
-f"{chr(xor_value)}")
-
-decoded_message = "".join(decoded_chars)
-
-print("\nDecoded Message:")
-print(decoded_message)
-
-
-
-Credit: 
+# Credit:
 Tems ---- Coder Helper
 Damon -- Decoder/Cryptographer Guy/ Consulting
 Tems (MY FRIEND IN NORTHEASTER SENIOR YEAR - MAJOR - BIOINFORMATICS - BIOTECH --- email -- t.miyatov@gmail.com) --- with the help of my DECODER FRIEND (DAMON - EMAIL --- jelliot1231@gmail.com) --- THANG (CODER: thangle246@gmail.com) 
+
 yayyyyyyy -- sending email at 8:22 pm but it was finished at 7:30pm and i was re-reading my email for an hour 
